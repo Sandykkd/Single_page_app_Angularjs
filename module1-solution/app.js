@@ -15,7 +15,7 @@
                 var str = string.split(",");
                 var arr = str.length;
                   
-                for(var i=0;i<string.length;i++)   
+                for(var i=0;i<arr;i++)   
                 {
                     if(str[i] == "")
                         arr=  arr-1;
