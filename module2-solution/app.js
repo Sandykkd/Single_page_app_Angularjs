@@ -62,17 +62,20 @@
 
         
         var bought = [];
+        
      
          
         service.removeItem = function (item) {
             bought.push(item);
 
-            to_buy.splice(item, 1);
+            var index = to_buy.indexOf(item);
+
+            to_buy.splice(index, 1);
          
             
 
         };
-        //alert(bought);
+      
         service.boughtItems = function (item) {
 
             return bought;
