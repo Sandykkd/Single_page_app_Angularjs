@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListCheckOff'>
+
+<head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body{
+            font-size: 1.2em;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50em;
+        }
+
+        
+    </style>
+    <title>Custom Service</title>
+</head>
+
+<body>
+    <h2>Check Off</h2>
+
+    <h3>Tobuy</h3>
+    <div ng-controller='ToBuyController as showList'>
+        <ul>
+            <div>
+                <li ng-repeat="item in showList.to_buy" >
+                    Buy {{ item.itemQuantity }} {{ item.itemName}}
+                    <button ng-click="showList.removeItem(item);">Bought</button>
+                </li>
+                <div ng-show="showList.to_buy.length==0">Everything is bought!</div>
+            </div>
+
+        </ul><br>
+
+    </div>
+
+    <h3>Already Bought</h3>
+    <div ng-controller='AlreadyBoughtController as itemAdder'>
+        <div ng-show="itemAdder.bought.length===0" >Nothing bought yet</div> 
+       <div>
+        <ul>
+            <li ng-repeat="item in itemAdder.bought">
+                Bought {{ item.itemQuantity }} {{item.itemName }}
+            </li>
+
+        </ul>
+    </div>
+
+    </div>
+</body>
+
+</html>
