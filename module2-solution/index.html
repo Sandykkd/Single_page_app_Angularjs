@@ -29,7 +29,7 @@
                     Buy {{ item.itemQuantity }} {{ item.itemName}}
                     <button ng-click="showList.removeItem(item);">Bought</button>
                 </li>
-                <div ng-show="showList.to_buy.length==0">Everything is bought!</div>
+                <div ng-show="showList.to_buy.length===0">Everything is bought!</div>
             </div>
 
         </ul><br>
