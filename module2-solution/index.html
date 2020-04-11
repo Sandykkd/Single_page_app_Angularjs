@@ -23,7 +23,7 @@
 
     <h3>Tobuy</h3>
     <div ng-controller='ToBuyController as showList'>
-        <ul>
+        <ul style="list-style-type:none;">
             <div>
                 <li ng-repeat="item in showList.to_buy" >
                     Buy {{ item.itemQuantity }} {{ item.itemName}}
@@ -40,7 +40,7 @@
     <div ng-controller='AlreadyBoughtController as itemAdder'>
         <div ng-show="itemAdder.bought.length===0" >Nothing bought yet</div> 
        <div>
-        <ul>
+        <ul style="list-style-type:none;">
             <li ng-repeat="item in itemAdder.bought">
                 Bought {{ item.itemQuantity }} {{item.itemName }}
             </li>
