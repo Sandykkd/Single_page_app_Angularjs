@@ -1,0 +1,48 @@
+<html lang="en" ng-app="MenuApp">
+
+<head>
+    <title>Welcome to our Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Libraries-->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules-->
+    <script src="MenuApp/menuapp.module.js"></script>
+    <script src="Data/data.module.js"></script>
+    
+    <script src="MenuApp/routes.js"></script>
+
+    <script src="Data/menudata.service.js"></script>
+    
+    <script src="MenuApp/menuappItems.controller.js"></script>
+    <script src="MenuApp/menuapp.controller.js"></script>
+    
+    <script src="Data/items.component.js"></script>
+    <script src="Data/categories.component.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1,h3 {
+            text-align: center;
+        }
+
+        li[ui-sref]:hover {
+            display: inline-block;
+            cursor: pointer;
+            border: solid black 1px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to our Restaurant</h1>
+    <ui-view></ui-view>
+</body>
+
+</html>
